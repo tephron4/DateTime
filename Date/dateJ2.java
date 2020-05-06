@@ -13,8 +13,6 @@ import java.awt.Font;
 
 public class dateJ2{
 
-	Scanner s = new Scanner(System.in);
-
 	JFrame window;
 	JLabel date;
 

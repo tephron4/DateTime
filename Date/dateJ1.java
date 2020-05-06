@@ -12,7 +12,6 @@ import javax.swing.*;
 import java.awt.Font;
 
 public class dateJ1{
-	Scanner s = new Scanner(System.in);
 
 	public static void main(String[] args){
 		JFrame window = new JFrame("Date V1");
