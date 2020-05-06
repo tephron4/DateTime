@@ -45,7 +45,7 @@ public class dateJ2{
 			d2.date.setFont(new Font("TimesRoman",Font.PLAIN,32));
 			d2.window.add(d2.date);
 
-			System.out.println("Updated");
+			//System.out.println("Updated");
 		}
 	}
 }
