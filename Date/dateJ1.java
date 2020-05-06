@@ -1,8 +1,8 @@
 /**
  * Code for using the java.time.LocalDate class;
  *
- * Version 1 (Started May 4, 2020)
- * Tobias Ephron
+ * @version Version 1 (Started May 4, 2020)
+ * @author Tobias Ephron
  */
 
 import java.util.*;

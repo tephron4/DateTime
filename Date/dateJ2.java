@@ -1,8 +1,8 @@
 /**
  * Code for using the java.time.LocalDate class and updating the date using a Thread;
  *
- * Version 2 (Started May 5, 2020)
- * Tobias Ephron
+ * @version Version 2 (Started May 5, 2020)
+ * @author Tobias Ephron
  */
 
 import java.util.*;
