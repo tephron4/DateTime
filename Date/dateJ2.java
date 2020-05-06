@@ -1,5 +1,5 @@
 /**
- * Code for using the java.time.LocalDate class and updating the date using a Thread;
+ * Code for using the java.time.LocalDate class and updating the date with a loop;
  *
  * @version Version 2 (Started May 5, 2020)
  * @author Tobias Ephron
@@ -11,14 +11,12 @@ import java.time.format.DateTimeFormatter;
 import javax.swing.*;
 import java.awt.Font;
 
-public class dateJ2 implements Runnable{
+public class dateJ2{
 
 	Scanner s = new Scanner(System.in);
 
 	JFrame window;
 	JLabel date;
-
-	public void run(){}
 
 	public dateJ2(){
 		window = new JFrame("Date V2");
