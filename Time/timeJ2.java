@@ -39,14 +39,14 @@ class timeJ2{
 	public static void main(String[] args){
 		timeJ2 t2 = new timeJ2();
 
-		int i = 0;
+		//int i = 0;
 		int lastSec = t2.now.getSecond();
-		while(i < 30){
+		while(true){
 			t2.now = LocalTime.now();
 			if(t2.now.getSecond() != lastSec){
 				t2.updateTime();
 				lastSec = t2.now.getSecond();
-				i++;
+				//i++;
 			}
 		}
 	}
