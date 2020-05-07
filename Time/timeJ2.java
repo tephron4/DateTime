@@ -14,6 +14,7 @@ import java.awt.Font;
 class timeJ2{
 
 	JFrame window;
+	JPanel tPanel;
 	LocalTime now;
 	String nowString;
 	JLabel time;
@@ -24,10 +25,12 @@ class timeJ2{
 		this.window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.window.setSize(400,400);
 
+		this.tPanel = new JPanel();
+
 		now = LocalTime.now();
 		dtf = DateTimeFormatter.ofPattern("h:mm.ss a");
 		nowString = now.format(dtf);
-		System.out.println(this.nowString);
+		//System.out.println(this.nowString);
 
 		time = new JLabel(this.nowString,JLabel.CENTER);
 		time.setFont(new Font("TimesRoman",Font.PLAIN, 32));
@@ -40,25 +43,33 @@ class timeJ2{
 		timeJ2 t2 = new timeJ2();
 
 		int i = 0;
-		while(i < 100){
-			t2.updateTime();
-			i++;
+		int lastSec = t2.now.getSecond();
+		while(i < 30){
+			t2.now = LocalTime.now();
+			if(t2.now.getSecond() != lastSec){
+				t2.updateTime();
+				lastSec = t2.now.getSecond();
+				i++;
+			}
 		}
 	}
 
 	public void updateTime(){
 		try{
 			this.window.getContentPane().remove(time);
+			//System.out.println("Removed time");
 
 			this.now = LocalTime.now();
 			this.nowString = this.now.format(this.dtf);
-			System.out.println(this.nowString);
+			//System.out.println(this.nowString);
 
 			time = new JLabel(this.nowString,JLabel.CENTER);
-			time.setFont(new Font("TimesRoman",Font.PLAIN,32));
+			time.setFont(new Font("TimesRoman",Font.PLAIN, 32));
 
 			this.window.getContentPane().add(time);
-			System.out.println("Added time");
+			this.window.revalidate();
+			this.window.repaint();
+			//System.out.println("Added time");
 		} catch(NullPointerException e){
 			System.out.println("window does not contain time object");
 		}
