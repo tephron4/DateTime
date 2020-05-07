@@ -13,9 +13,14 @@ import java.awt.Font;
 
 public class dateJ2{
 
+	/** JFrame object for the clock window */
 	JFrame window;
+	/** JLabel object of the text of the current date */
 	JLabel date;
 
+	/**
+	 * Constructor method for a dateJ2 object
+	 */
 	public dateJ2(){
 		window = new JFrame("Date V2");
 		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -33,6 +38,9 @@ public class dateJ2{
 		window.setVisible(true);
 	}
 
+	/**
+	 * main method
+	 */
 	public static void main(String[] args){
 		dateJ2 d2 = new dateJ2();
 

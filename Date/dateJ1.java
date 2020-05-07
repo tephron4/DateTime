@@ -13,6 +13,9 @@ import java.awt.Font;
 
 public class dateJ1{
 
+	/** 
+	 * main method
+	 */
 	public static void main(String[] args){
 		JFrame window = new JFrame("Date V1");
 		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
