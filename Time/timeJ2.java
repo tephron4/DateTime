@@ -13,12 +13,20 @@ import java.awt.Font;
 
 class timeJ2{
 
+	/** JFrame object for the clock window */
 	JFrame window;
+	/** LocalTime object for the current time */
 	LocalTime now;
+	/** String object for the String representation of the current time */
 	String nowString;
+	/** JLabel object of the text of the current time */
 	JLabel time;
+	/** DateTimeFormatter object for the format of the time */
 	DateTimeFormatter dtf;
 
+	/** 
+	 * Constructor method for a timeJ2 object
+	 */
 	public timeJ2(){
 		this.window = new JFrame("Time V2");
 		this.window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -36,6 +44,9 @@ class timeJ2{
 		this.window.setVisible(true);
 	}
 
+	/** 
+	 * main method
+	 */
 	public static void main(String[] args){
 		timeJ2 t2 = new timeJ2();
 
@@ -51,12 +62,14 @@ class timeJ2{
 		}
 	}
 
+	/** 
+	 * Method for updating the current time displayed
+	 */
 	public void updateTime(){
 		try{
 			this.window.getContentPane().remove(time);
 			//System.out.println("Removed time");
 
-			this.now = LocalTime.now();
 			this.nowString = this.now.format(this.dtf);
 			//System.out.println(this.nowString);
 

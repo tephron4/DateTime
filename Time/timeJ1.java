@@ -13,9 +13,14 @@ import java.awt.Font;
 
 class timeJ1{
 
+	/** JFrame object for the clock window */
 	JFrame window;
+	/** JLabel object of the text of the current time */
 	JLabel time;
 
+	/** 
+	 * Constructor method for a timeJ1 object
+	 */
 	public timeJ1(){
 		JFrame window = new JFrame("Time V1");
 		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -34,6 +39,9 @@ class timeJ1{
 		window.setVisible(true);
 	}
 
+	/** 
+	 * main method
+	 */
 	public static void main(String[] args){
 		timeJ1 t1 = new timeJ1();
 	}
