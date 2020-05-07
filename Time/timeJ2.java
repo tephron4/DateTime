@@ -14,7 +14,6 @@ import java.awt.Font;
 class timeJ2{
 
 	JFrame window;
-	JPanel tPanel;
 	LocalTime now;
 	String nowString;
 	JLabel time;
@@ -24,8 +23,6 @@ class timeJ2{
 		this.window = new JFrame("Time V2");
 		this.window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.window.setSize(400,400);
-
-		this.tPanel = new JPanel();
 
 		now = LocalTime.now();
 		dtf = DateTimeFormatter.ofPattern("h:mm.ss a");
