@@ -14,20 +14,35 @@ import java.awt.Font;
 
 class dtJ1{
 
+	/** JFrame object for the clock window */
 	JFrame window;
+	/** JPanel object for the panel containing the date and time */
 	JPanel panel;
+	/** LocalDate object for the current date */
 	LocalDate today;
+	/** LocalTime object for the current time */
 	LocalTime now;
+	/** String object for the String representation of the current date */
 	String todayString;
+	/** String object for the String representation of the current time */
 	String nowString;
+	/** JLabel object of the text of the current date */
 	JLabel date;
+	/** JLabel object of the text of the current time */
 	JLabel time;
+	/** DateTimeFormatter object for the format of the date */
 	DateTimeFormatter dateFormat = DateTimeFormatter.ofPattern("E, MMM d, yyyy");
+	/** DateTimeFormatter object for the format of the time */
 	DateTimeFormatter timeFormat = DateTimeFormatter.ofPattern("h:mm a");
-
+	/** Font object for the date's font */
 	Font dateFont = new Font("TimesRoman",Font.PLAIN,48);
+	/** Font object for the time's font */
 	Font timeFont = new Font("TimesRoman",Font.PLAIN,32);
 
+
+	/** 
+	 * Constructor method for a dtJ1 object
+	 */
 	public dtJ1(){
 		this.window = new JFrame("Date Time V1");
 		this.window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -54,6 +69,9 @@ class dtJ1{
 		this.window.setVisible(true);
 	}
 
+	/**  
+	 * main method
+	 */
 	public static void main(String[] args){
 		dtJ1 dt = new dtJ1();
 
@@ -72,6 +90,9 @@ class dtJ1{
 		}
 	}
 
+	/**  
+	 * Method for updating the current date displayed
+	 */
 	public void updateDate(){
 		try{
 			this.window.getContentPane().remove(panel);
@@ -93,6 +114,9 @@ class dtJ1{
 		}
 	}
 
+	/** 
+	 * Method for updating the current time displayed
+	 */
 	public void updateTime(){
 		try{
 			this.window.getContentPane().remove(panel);
